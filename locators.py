@@ -1,39 +1,37 @@
 # Хедер - кнопка "Конструктор", логотип "Stellar Burgers", кнопка "Личный кабинет"
-header_constructor_btn = './/header//li[1]/a/p'
-header_logo_btn = './/header/nav/div[@class="AppHeader_header__logo__2D0X2"]/a'
-header_personal_area_btn = './/header/nav/a'
+header_constructor_btn = './/p[text()="Конструктор"]'
+header_logo_btn = './/div[@class="AppHeader_header__logo__2D0X2"]'
+header_personal_area_btn = './/p[text()="Личный Кабинет"]'
 
 # Вход в личный кабинет - ссылки "Зарегистрироваться" и "Восстановить пароль"
-do_register = './/main/div/div/p[1]/a[text()="Зарегистрироваться"]'
-password_recovery = './/main/div/div/p[2]/a[text()="Восстановить пароль"]'
+do_register = './/a[text()="Зарегистрироваться"]'
+password_recovery = './/a[text()="Восстановить пароль"]'
 
-# Регистрация - инпуты "Имя", "Email", "Пароль", кнопка "Зарегистрироваться"
-input_name = './/main/div/form[@class="Auth_form__3qKeq mb-20"]/fieldset[1]/div/div/input'
-input_email = './/main/div/form[@class="Auth_form__3qKeq mb-20"]/fieldset[2]/div/div/input'
-input_password = './/main/div/form[@class="Auth_form__3qKeq mb-20"]/fieldset[3]/div/div/input'
-register_btn = './/*[@id="root"]/div/main/div/form/button[text()="Зарегистрироваться"]'
+# Инпуты "Имя", "Email", "Пароль"
+input_name = './/label[text()="Имя"]/following-sibling::input'
+input_email = './/label[text()="Email"]/following-sibling::input'
+input_password = './/input[@type="password"]'
 
-# Регистрация/восстановление пароля - ссылка "Войти"
-login_link = './/*[@id="root"]/div/main/div/div/p/a[text()="Войти"]'
-
-# Авторизация - инпуты "Email", "Пароль", кнопка "Войти"
-login_input_email = './/main/div/form[@class="Auth_form__3qKeq mb-20"]/fieldset[1]/div/div/input'
-login_input_password = './/main/div/form[@class="Auth_form__3qKeq mb-20"]/fieldset[2]/div/div/input'
-login_btn = './/*[@id="root"]/div/main/div/form/button[text()="Войти"]'
+# Регистрация - кнопка "Зарегистрироваться"
+register_btn = './/button[text()="Зарегистрироваться"]'
 
 # Текст ошибки при регистрации с некорректным паролем
-incorrect_password = './/main/div/form/fieldset[3]/div/p[@class="input__error text_type_main-default"]'
+incorrect_password = './/p[@class="input__error text_type_main-default"]'
 
-# Кнопка "Войти в аккаунт" / "Оформить заказ" появляется на главной странице после авторизации
-login_or_make_order_btn = './/main/section[2]/div/button'
+# Регистрация/восстановление пароля - ссылка "Войти"
+login_link = './/a[@class="Auth_link__1fOlj"]'
 
-# Личный кабинет - инпуты "Имя", "Email", кнопки "Сохранить" и "Выход"
-profile_name = './/main/div/div/div/ul/li[1]/div/div/input'
-profile_email = './/main/div/div/div/ul/li[2]/div/div/input'
-profile_save_btn = './/main/div/div/div/div/button[2]'
-profile_logout_btn = './/main/div/nav/ul/li[3]/button[text()="Выход"]'
+# Авторизация - кнопка "Войти"
+login_btn = './/button[text()="Войти"]'
 
-# Конструктор - кнопки и разделы «Булки», «Соусы», «Начинки»
-constructor_bread_btn = './/main/section[1]/div[1]/div[1]'
-constructor_sauce_btn = './/main/section[1]/div[1]/div[2]'
-constructor_filling_btn = './/main/section[1]/div[1]/div[3]'
+# Кнопка "Войти в аккаунт" / "Оформить заказ" - появляется на главной странице после авторизации
+login_or_make_order_btn = \
+    './/button[@class="button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_large__G21Vg"]'
+
+# Личный кабинет - кнопка "Выход"
+profile_logout_btn = './/button[text()="Выход"]'
+
+# Конструктор - кнопки «Булки», «Соусы», «Начинки»
+cons_bread_btn = './/span[text()="Булки"]'
+cons_sauce_btn = './/span[text()="Соусы"]'
+cons_filling_btn = './/span[text()="Начинки"]'

@@ -15,8 +15,8 @@ def test_login_from_login_button(site):
     site.find_element(By.XPATH, locators.login_or_make_order_btn).click()
     # Wait until the login button is clickable, then fill fields login, password, and click login
     WebDriverWait(site, 5).until(EC.element_to_be_clickable((By.XPATH, locators.login_btn)))
-    site.find_element(By.XPATH, locators.login_input_email).send_keys(login)
-    site.find_element(By.XPATH, locators.login_input_password).send_keys(password)
+    site.find_element(By.XPATH, locators.input_email).send_keys(login)
+    site.find_element(By.XPATH, locators.input_password).send_keys(password)
     site.find_element(By.XPATH, locators.login_btn).click()
     # Ensure that after authorisation returned to main page and 'account login' button changed to 'make order' button
     WebDriverWait(site, 5).until(EC.element_to_be_clickable((By.XPATH, locators.login_or_make_order_btn)))
@@ -30,8 +30,8 @@ def test_login_to_personal_area(site):
     site.find_element(By.XPATH, locators.header_personal_area_btn).click()
     # Wait until the login button is clickable, then fill fields login, password, and click login
     WebDriverWait(site, 5).until(EC.element_to_be_clickable((By.XPATH, locators.login_btn)))
-    site.find_element(By.XPATH, locators.login_input_email).send_keys(login)
-    site.find_element(By.XPATH, locators.login_input_password).send_keys(password)
+    site.find_element(By.XPATH, locators.input_email).send_keys(login)
+    site.find_element(By.XPATH, locators.input_password).send_keys(password)
     site.find_element(By.XPATH, locators.login_btn).click()
     # Ensure that after authorisation returned to main page and 'account login' button changed to 'make order' button
     WebDriverWait(site, 5).until(EC.element_to_be_clickable((By.XPATH, locators.login_or_make_order_btn)))
@@ -51,8 +51,8 @@ def test_login_from_registration_page(site):
     site.find_element(By.XPATH, locators.login_link).click()
     # Wait until the login button is clickable, then fill fields login, password, and click login
     WebDriverWait(site, 5).until(EC.element_to_be_clickable((By.XPATH, locators.login_btn)))
-    site.find_element(By.XPATH, locators.login_input_email).send_keys(login)
-    site.find_element(By.XPATH, locators.login_input_password).send_keys(password)
+    site.find_element(By.XPATH, locators.input_email).send_keys(login)
+    site.find_element(By.XPATH, locators.input_password).send_keys(password)
     site.find_element(By.XPATH, locators.login_btn).click()
     # Ensure that after authorisation returned to main page and 'account login' button changed to 'make order' button
     WebDriverWait(site, 5).until(EC.element_to_be_clickable((By.XPATH, locators.login_or_make_order_btn)))
@@ -72,8 +72,8 @@ def test_login_from_password_recovery_page(site):
     site.find_element(By.XPATH, locators.login_link).click()
     # Wait until the login button is clickable, then fill fields login, password, and click login
     WebDriverWait(site, 5).until(EC.element_to_be_clickable((By.XPATH, locators.login_btn)))
-    site.find_element(By.XPATH, locators.login_input_email).send_keys(login)
-    site.find_element(By.XPATH, locators.login_input_password).send_keys(password)
+    site.find_element(By.XPATH, locators.input_email).send_keys(login)
+    site.find_element(By.XPATH, locators.input_password).send_keys(password)
     site.find_element(By.XPATH, locators.login_btn).click()
     # Ensure that after authorisation returned to main page and 'account login' button changed to 'make order' button
     WebDriverWait(site, 5).until(EC.element_to_be_clickable((By.XPATH, locators.login_or_make_order_btn)))
