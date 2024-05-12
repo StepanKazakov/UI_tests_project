@@ -34,10 +34,6 @@ profile_save_btn = './/main/div/div/div/div/button[2]'
 profile_logout_btn = './/main/div/nav/ul/li[3]/button[text()="Выход"]'
 
 # Конструктор - кнопки и разделы «Булки», «Соусы», «Начинки»
-constructor_category_buttons = './/main/section[1]/div[1]'
 constructor_bread_btn = './/main/section[1]/div[1]/div[1]'
-constructor_bread_title = './/main/section[1]/div[2]/h2[1][text()="Булки"]'
-constructor_sauce_btn = './/main/section[1]/div[1]/div[2]/span[text()="Соусы"]'
-constructor_sauce_title = './/main/section[1]/div[2]/h2[2][text()="Соусы"]'
-constructor_filling_btn = './/main/section[1]/div[1]/div[3]/span[text()="Начинки"]'
-constructor_filling_title = './/main/section[1]/div[2]/h2[3][text()="Начинки"]'
+constructor_sauce_btn = './/main/section[1]/div[1]/div[2]'
+constructor_filling_btn = './/main/section[1]/div[1]/div[3]'
