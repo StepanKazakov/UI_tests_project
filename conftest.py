@@ -10,8 +10,6 @@ import credentials
 @pytest.fixture(scope='function')
 def driver():
     driver = webdriver.Chrome()
-    # для тестов в браузере Firefox закомментировать строку выше и раскомментировать строку ниже и паузу в site
-    # driver = webdriver.Firefox()
     yield driver
     driver.quit()
 
@@ -19,7 +17,6 @@ def driver():
 @pytest.fixture(scope='function')
 def site(driver):
     driver.get('https://stellarburgers.nomoreparties.site/')
-    # time.sleep(2)  # Раскомментировать при использовании Firefox driver, необходимо для стабилизации страницы
     return driver
 
 
