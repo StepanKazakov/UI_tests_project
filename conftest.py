@@ -20,11 +20,6 @@ def site(driver):
     return driver
 
 
-@pytest.fixture(scope='function')
-def wait(site):
-    return WebDriverWait(site, 5)
-
-
 @pytest.fixture(scope="session")
 def user_credentials():
     login = credentials.login()
