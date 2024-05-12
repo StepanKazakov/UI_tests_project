@@ -1,4 +1,3 @@
-import pytest
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
@@ -6,10 +5,11 @@ from selenium.webdriver.support.wait import WebDriverWait
 import locators
 
 
-@pytest.mark.order(3)
-def test_login_from_login_button(site, user_credentials):
-    # Extract credentials provided by the fixture
-    login, password = user_credentials
+login = 'kazakovstepan1262@ya.ru'
+password = '123456'
+
+
+def test_login_from_login_button(site):
     # Wait until the account login button is clickable and then click it
     WebDriverWait(site, 5).until(EC.element_to_be_clickable((By.XPATH, locators.login_or_make_order_btn)))
     site.find_element(By.XPATH, locators.login_or_make_order_btn).click()
@@ -24,10 +24,7 @@ def test_login_from_login_button(site, user_credentials):
            site.find_element(By.XPATH, locators.login_or_make_order_btn).text == 'Оформить заказ'
 
 
-@pytest.mark.order(4)
-def test_login_to_personal_area(site, user_credentials):
-    # Extract credentials provided by the fixture
-    login, password = user_credentials
+def test_login_to_personal_area(site):
     # Wait until the personal area link is clickable and then click it
     WebDriverWait(site, 5).until(EC.element_to_be_clickable((By.XPATH, locators.header_personal_area_btn)))
     site.find_element(By.XPATH, locators.header_personal_area_btn).click()
@@ -42,10 +39,7 @@ def test_login_to_personal_area(site, user_credentials):
            site.find_element(By.XPATH, locators.login_or_make_order_btn).text == 'Оформить заказ'
 
 
-@pytest.mark.order(5)
-def test_login_from_registration_page(site, user_credentials):
-    # Extract credentials provided by the fixture
-    login, password = user_credentials
+def test_login_from_registration_page(site):
     # Wait until the account login button is clickable and then click it
     WebDriverWait(site, 5).until(EC.element_to_be_clickable((By.XPATH, locators.login_or_make_order_btn)))
     site.find_element(By.XPATH, locators.login_or_make_order_btn).click()
@@ -66,10 +60,7 @@ def test_login_from_registration_page(site, user_credentials):
            site.find_element(By.XPATH, locators.login_or_make_order_btn).text == 'Оформить заказ'
 
 
-@pytest.mark.order(6)
-def test_login_from_password_recovery_page(site, user_credentials):
-    # Extract credentials provided by the fixture
-    login, password = user_credentials
+def test_login_from_password_recovery_page(site):
     # Wait until the account login button is clickable and then click it
     WebDriverWait(site, 5).until(EC.element_to_be_clickable((By.XPATH, locators.login_or_make_order_btn)))
     site.find_element(By.XPATH, locators.login_or_make_order_btn).click()

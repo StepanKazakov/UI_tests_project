@@ -1,10 +1,5 @@
-import time
 import pytest
-
 from selenium import webdriver
-from selenium.webdriver.support.wait import WebDriverWait
-
-import credentials
 
 
 @pytest.fixture(scope='function')
@@ -18,10 +13,3 @@ def driver():
 def site(driver):
     driver.get('https://stellarburgers.nomoreparties.site/')
     return driver
-
-
-@pytest.fixture(scope="session")
-def user_credentials():
-    login = credentials.login()
-    password = credentials.password()
-    return login, password
