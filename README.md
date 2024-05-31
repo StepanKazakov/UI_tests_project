@@ -1,4 +1,4 @@
-# Финальный проект 5-го спринта 
+# UI tests 
 1. Основа для написания автотестов — фреймворк pytest + selenium.
 2. Установить selenium webdriver — pip install selenium.
 3. Установить pytest - pip install pytest
